@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>carebilling</id>
+    <name>CareBilling</name>
+    <summary>Invoice and billing management for Nextcloud</summary>
+    <description>
+        CareBilling provides invoice, customer, service, payment and billing
+        management with optional integration with CareForms.
+    </description>
+
+    <version>0.1.0</version>
+
+    <licence>agpl</licence>
+    <author>Salim Said Hemed</author>
+
+    <namespace>CareBilling</namespace>
+
+    <category>organization</category>
+
+    <dependencies>
+        <nextcloud min-version="31" max-version="32"/>
+    </dependencies>
+</info>
