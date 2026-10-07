@@ -1,8 +1,27 @@
+#app-content.carebilling-app-content {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: var(--color-main-background);
+}
+
 #carebilling.carebilling-page {
+    box-sizing: border-box;
+    width: 100%;
     min-height: calc(100vh - 50px);
+    margin: 0;
     padding: 32px;
     color: var(--color-main-text);
     background: var(--color-main-background);
+    overflow-x: hidden;
+}
+
+#carebilling.carebilling-page *,
+#carebilling.carebilling-page *::before,
+#carebilling.carebilling-page *::after {
+    box-sizing: border-box;
 }
 
 .carebilling-header {
@@ -10,6 +29,7 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 24px;
+    width: 100%;
     margin-bottom: 24px;
 }
 
@@ -46,8 +66,9 @@
 
 .carebilling-metrics {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
     gap: 12px;
+    width: 100%;
     margin-bottom: 24px;
 }
 
@@ -79,8 +100,9 @@
 
 .carebilling-grid {
     display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+    grid-template-columns: minmax(0, 3fr) minmax(320px, 1fr);
     gap: 16px;
+    width: 100%;
 }
 
 .carebilling-panel {
@@ -152,6 +174,7 @@
 
 @media (max-width: 900px) {
     #carebilling.carebilling-page {
+        width: 100%;
         padding: 20px;
     }
 
