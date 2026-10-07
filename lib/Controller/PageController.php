@@ -25,6 +25,7 @@ class PageController extends Controller
     public function index(): TemplateResponse
     {
         Util::addStyle('carebilling', 'main');
+        Util::addScript('carebilling', 'main');
 
         return new TemplateResponse(
             'carebilling',

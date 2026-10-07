@@ -1,6 +1,7 @@
 /node_modules/
 /vendor/
-/js/
+/js/*
+!/js/main.js
 .DS_Store
 .idea/
 .vscode/
