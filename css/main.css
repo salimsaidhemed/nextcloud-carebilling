@@ -1,6 +1,15 @@
+#app-content.carebilling-app-content {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: var(--color-main-background);
+}
+
 #carebilling.carebilling-page {
     box-sizing: border-box;
-    width: calc(100vw - 16px);
+    width: 100%;
     min-height: calc(100vh - 50px);
     margin: 0;
     padding: 32px;
