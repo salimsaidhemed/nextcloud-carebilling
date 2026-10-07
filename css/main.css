@@ -1,0 +1,185 @@
+#carebilling.carebilling-page {
+    min-height: calc(100vh - 50px);
+    padding: 32px;
+    color: var(--color-main-text);
+    background: var(--color-main-background);
+}
+
+.carebilling-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.carebilling-kicker {
+    margin: 0 0 4px;
+    color: var(--color-text-maxcontrast);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.carebilling-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.carebilling-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.carebilling-actions button {
+    min-height: 36px;
+}
+
+.carebilling-actions button.primary {
+    background-color: var(--color-primary-element);
+    color: var(--color-primary-element-text);
+    border-color: var(--color-primary-element);
+}
+
+.carebilling-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.carebilling-metrics article,
+.carebilling-panel {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-large);
+    background: var(--color-main-background);
+}
+
+.carebilling-metrics article {
+    display: flex;
+    min-height: 96px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.carebilling-metric-label {
+    color: var(--color-text-maxcontrast);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.carebilling-metrics strong {
+    font-size: 28px;
+    line-height: 1;
+}
+
+.carebilling-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+    gap: 16px;
+}
+
+.carebilling-panel {
+    min-height: 280px;
+    overflow: hidden;
+}
+
+.carebilling-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 56px;
+    padding: 0 16px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.carebilling-panel-header h2 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.carebilling-empty-state {
+    display: flex;
+    min-height: 220px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 24px;
+    text-align: center;
+    color: var(--color-text-maxcontrast);
+}
+
+.carebilling-empty-state strong {
+    color: var(--color-main-text);
+    font-size: 16px;
+}
+
+.carebilling-module-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.carebilling-module-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 52px;
+    padding: 0 16px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.carebilling-module-list li:last-child {
+    border-bottom: 0;
+}
+
+.carebilling-module-list em {
+    color: var(--color-text-maxcontrast);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    #carebilling.carebilling-page {
+        padding: 20px;
+    }
+
+    .carebilling-header,
+    .carebilling-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .carebilling-header {
+        display: block;
+    }
+
+    .carebilling-actions {
+        justify-content: flex-start;
+        margin-top: 16px;
+    }
+
+    .carebilling-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    #carebilling.carebilling-page {
+        padding: 16px;
+    }
+
+    .carebilling-metrics {
+        grid-template-columns: 1fr;
+    }
+}
