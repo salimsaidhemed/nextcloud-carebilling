@@ -64,6 +64,44 @@
     border-color: var(--color-primary-element);
 }
 
+.carebilling-tabs {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 6px;
+    overflow-x: auto;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-large);
+    background: var(--color-main-background);
+    scrollbar-width: thin;
+}
+
+.carebilling-tab {
+    flex: 0 0 auto;
+    min-height: 36px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: var(--border-radius);
+    background: transparent;
+    color: var(--color-main-text);
+    font-weight: 600;
+}
+
+.carebilling-tab.active {
+    background: var(--color-primary-element);
+    color: var(--color-primary-element-text);
+}
+
+.carebilling-workspace,
+.carebilling-view {
+    width: 100%;
+}
+
+.carebilling-view[hidden] {
+    display: none;
+}
+
 .carebilling-metrics {
     display: grid;
     grid-template-columns: repeat(4, minmax(180px, 1fr));
@@ -125,6 +163,12 @@
     font-weight: 700;
 }
 
+.carebilling-panel-header p {
+    margin: 4px 0 0;
+    color: var(--color-text-maxcontrast);
+    font-size: 13px;
+}
+
 .carebilling-empty-state {
     display: flex;
     min-height: 220px;
@@ -172,6 +216,38 @@
     font-weight: 600;
 }
 
+.carebilling-customers-panel {
+    min-height: 420px;
+}
+
+.carebilling-customers-panel .carebilling-panel-header {
+    min-height: 72px;
+}
+
+.carebilling-table {
+    width: 100%;
+}
+
+.carebilling-table-row {
+    display: grid;
+    grid-template-columns: minmax(180px, 2fr) minmax(180px, 2fr) minmax(140px, 1fr) minmax(120px, 1fr);
+    gap: 16px;
+    align-items: center;
+    min-height: 48px;
+    padding: 0 16px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.carebilling-table-heading {
+    color: var(--color-text-maxcontrast);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.carebilling-empty-state-table {
+    min-height: 260px;
+}
+
 @media (max-width: 900px) {
     #carebilling.carebilling-page {
         width: 100%;
@@ -194,6 +270,15 @@
 
     .carebilling-metrics {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .carebilling-table {
+        overflow-x: auto;
+    }
+
+    .carebilling-table-row {
+        grid-template-columns: minmax(160px, 2fr) minmax(160px, 2fr) minmax(120px, 1fr) minmax(100px, 1fr);
+        min-width: 640px;
     }
 }
 
