@@ -9,6 +9,7 @@ use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IRequest;
+use OCP\Util;
 
 class PageController extends Controller
 {
@@ -23,6 +24,8 @@ class PageController extends Controller
     #[NoCSRFRequired]
     public function index(): TemplateResponse
     {
+        Util::addStyle('carebilling', 'main');
+
         return new TemplateResponse(
             'carebilling',
             'main'
